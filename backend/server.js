@@ -46,6 +46,16 @@ async function connectDB(){
     .catch(err => console.log(`Error on db connection:  ${err.message}`));
     //Populate DB here !
     //----------------------------------------------------------------
+    try{
+        const slide = new Slide({imageUrl:'https://shop.westerndigital.com/content/dam/store/en-us/assets/products/memory-cards/extreme-uhs-i-sd/gallery/extreme-uhs-i-sd-16gb-front.png.thumb.1280.1280.png'});
+        await slide.save();
+        console.log(`Slide created successfully !`);
+    } catch (e) {
+        if (e.toString().substring(0,18) === 'MongoError: E11000')
+        {
+            console.log("Slide has already been created.");
+        }
+    }
     
 }
 connectDB();

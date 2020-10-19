@@ -3,7 +3,9 @@ const mongoose = require('mongoose')
 const slideSchema = new mongoose.Schema({
     imageUrl: {
         type: String,
-        default: undefined
+        default: undefined,
+        index: true,
+        unique: true
     }
 });
 
