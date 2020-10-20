@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+
+    server:
+        build: ./backend
+        expose:
+            - 4000
+        ports:
+            - 4000:4000
+        volumes:
+            - ./backend/src:/srv/app/admin-server/src
+        depends_on:
+            - mongo    
+        command: npm run start
+
+    client:
+        build: ./frontend
+        expose:
+            - 3000   
+        ports:
+            - 80:3000
+        volumes:
+            - ./frontend/src:/srv/app/admin-client/src
+            - ./frontend/public:/srv/app/admin-client/public
+        stdin_open: true
+        command: npm run start
+
+    mongo:
+        image: mongo
+        ports:
+            - "27017:27017"

@@ -32,7 +32,7 @@ app.use(proxy, SlideRouter);
 // --------------------------------------------------------------------
 // MONGODB/MONGOOSE
 // --------------------------------------------------------------------
-const databaseUri = 'mongodb://localhost:27017/test-database';
+const databaseUri = 'mongodb://mongo:27017/plathanus-database';
 async function connectDB(){
     const connection = await mongoose.connect(databaseUri, {
                             useNewUrlParser: true,
