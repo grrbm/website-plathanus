@@ -47,7 +47,7 @@ async function connectDB(){
     //Populate DB here !
     //----------------------------------------------------------------
     try{
-        const slide = new Slide({imageUrl:'https://shop.westerndigital.com/content/dam/store/en-us/assets/products/memory-cards/extreme-uhs-i-sd/gallery/extreme-uhs-i-sd-16gb-front.png.thumb.1280.1280.png'});
+        const slide = new Slide({imageUrl:'https://drive.google.com/file/d/1DTG2OmU9Ovw9RnkeNoBbqq0v8KMCTfB9/view?usp=sharing'});
         await slide.save();
         console.log(`Slide created successfully !`);
     } catch (e) {
