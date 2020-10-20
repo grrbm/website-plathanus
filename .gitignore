@@ -8,3 +8,5 @@ frontend/build/**/*
 .vscode
 #README
 README.md
+#whatToChange
+whatToChange.txt
