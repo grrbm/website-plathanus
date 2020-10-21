@@ -1,4 +1,5 @@
 import React from "react"
+import NavbarCss from "./Navbar.scss"
 
 function Navbar() {
     const scrollToFunction = (event) => {

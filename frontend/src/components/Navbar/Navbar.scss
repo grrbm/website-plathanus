@@ -1,0 +1,113 @@
+/* Add the decaration on top */
+@font-face { 
+    font-family: 'Agustina';
+    src: url('../../fonts/Agustina.woff') format('woff');
+}
+
+@font-face { 
+    font-family: 'Montserrat';
+    src: local('Montserrat'), url('../../fonts/Montserrat-Regular.ttf') format('woff');
+}
+
+#app-container
+{
+    width: 1280px;
+}
+
+ul#menu
+{
+    list-style-type: none;
+    font-family: Montserrat;
+    background-color: white;
+    padding: 15px 0 15px 0;
+    margin: 0;
+    width:100%;
+    text-align: center
+}
+ul#menu li 
+{
+    display:inline-block;
+    padding: 15px 0 15px 0;
+    margin: 0 10px 0 0;
+}
+
+li a 
+{
+    width: 60px;
+    padding: 10px 13px 10px 13px;
+    text-decoration: none;
+    font-weight: normal;
+}
+a {color:black;}         /* Unvisited link  */
+a:visited {color:black;} /* Visited link    */
+a:hover 
+{
+    color:black;
+    background-color: #ECEEEF;
+}   /* Mouse over link */
+a:active {color:black;}  /* Selected link   */
+
+
+.title
+{
+    color: black;
+    font-size: 42px;
+}
+.subtitle
+{
+    font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:grey;
+}
+
+
+  
+
+
+div .list
+{
+font-family: Montserrat;
+font-weight: normal;
+font-style: normal;
+font-size: 32px;
+text-align: center;
+height: 100%;
+background-color: white;
+color:grey;
+justify-content: center;
+align-items: center;
+}
+
+
+
+#signature
+{
+font-family: Agustina;
+font-weight: bold;
+text-decoration: none;
+font-size: 18px;
+text-align: center;
+color: purple;
+width: 150px;
+margin: auto;
+}
+
+#signatureParent
+{
+text-align: center;
+text-decoration: none;
+color: grey;
+width: 150px;
+margin: auto;  
+}
+#signatureParent:hover {background-color: white;}
+
+.language-color {
+width: 7px;
+height: 7px;
+background-color: blue;
+margin-right: 0.25rem;
+border-radius: 100%;
+display: inline-block;
+}
