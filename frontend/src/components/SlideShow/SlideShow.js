@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import "./styles.css";
+import "./styles.scss";
 
 const fadeImages = [
   "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
@@ -43,7 +43,7 @@ export default function App() {
     fetchSlides();
   },[])
   return (
-    <div className="slide-container">
+    <div id="home" className="slide-container">
       {data}
     </div>
   );

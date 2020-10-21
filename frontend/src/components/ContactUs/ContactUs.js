@@ -1,8 +1,8 @@
 import React from "react"
-import "./ContactUs.css"
+import "./ContactUs.scss"
 
 function ContactUs(){
-    return (<div className="ContactUs">
+    return (<div id="contactus" className="ContactUs">
                 ContactUs
             </div>)
 }
