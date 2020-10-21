@@ -21,7 +21,7 @@ function NavBar() {
     const yodaGreen = '#D7E2C6';
 
     return (
-        <AppBar position="static" className={classes.Navbar}>
+        <AppBar position="absolute" className={classes.Navbar}>
         <Toolbar>
             
             <SvgIcon component={YodaLogo} style={{ fontSize: 30, verticalAlign: 'middle' }} viewBox="0 0 42 42" />

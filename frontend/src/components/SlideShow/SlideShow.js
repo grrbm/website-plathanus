@@ -34,7 +34,7 @@ export default function App() {
             let slidesJSX = allSlides.data.map(element => { 
                 return(
                     <div className="each-fade">
-                        <img style={{width:'100%', height:'100%'}} src={`data:image/jpeg;base64,${element}`}/>
+                        <img style={{height:'900px'}} src={`data:image/jpeg;base64,${element}`}/>
                     </div>)
             });
             setData(<Fade>{slidesJSX}</Fade>);
