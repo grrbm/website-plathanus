@@ -15,14 +15,15 @@ function SlideShow(){
                 method: 'get',
                 url: `/slides`
             });
-            console.log(JSON.stringify(allSlides.data));
+            console.log(JSON.stringify(allSlides.data[0]));
             setData(allSlides.data);
         } 
         fetchSlides();
     },[])
     return(
         <div>
-            {data ? <Example data={data} /> : <p>Nothing</p>}
+            {data && data[0] ? <Example data={data[0]} /> : <p>Nothing</p>}
+            {data && data[1] ? <Example data={data[1]} /> : <p>Nothing</p>}
             
         </div>
     )

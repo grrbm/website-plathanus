@@ -56,6 +56,16 @@ async function connectDB(){
             console.log("Slide has already been created.");
         }
     }
+    try {
+        const secondSlide = new Slide({imageUrl:'https://res.cloudinary.com/practicaldev/image/fetch/s--tOb6t0kL--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/l3ox5viwvknip9apk49t.png'});
+        await secondSlide.save();
+        console.log(`Second Slide created successfully !`);
+    } catch (e) {
+        if (e.toString().substring(0,18) === 'MongoError: E11000')
+        {
+            console.log("Second Slide has already been created.");
+        }
+    }
     
 }
 connectDB();
