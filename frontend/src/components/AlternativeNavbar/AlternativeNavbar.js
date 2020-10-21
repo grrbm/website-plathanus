@@ -11,6 +11,12 @@ function AlternativeNavbar(){
         }
         console.log("handling scroll");
     }
+    function handleClick(e){
+        console.log("handling click");
+        e.preventDefault();
+        const name = ""+e.target;
+        $(`a[href|='${'#'+name.split('#')[1]}']`).closest('li').addClass('active').siblings().removeClass('active')
+    }
     useEffect(()=>{
         window.addEventListener('scroll', handleScroll);
         return function cleanup() {
@@ -25,11 +31,10 @@ function AlternativeNavbar(){
                         
                         <div id="navbarSupportedContent" class="collapse navbar-collapse">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
-                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Gallery</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Portfolio</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
+                                <li class="nav-item"><a href="#home" onClick={handleClick} class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
+                                <li class="nav-item"><a href="#whatwedo" onClick={handleClick} class="nav-link text-uppercase font-weight-bold">What we do?</a></li>
+                                <li class="nav-item"><a href="#testimonials" onClick={handleClick} class="nav-link text-uppercase font-weight-bold">Testimonials</a></li>
+                                <li class="nav-item"><a href="#contactus" onClick={handleClick} class="nav-link text-uppercase font-weight-bold">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
