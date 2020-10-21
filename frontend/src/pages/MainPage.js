@@ -2,14 +2,18 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import Navbar from '../components/Navbar/Navbar.js'
 import SlideShow from '../components/SlideShow/SlideShow.js'
-import SlideShow2 from '../components/SlideShow2/SlideShow2.js'
+import WhatWeDo from '../components/WhatWeDo/WhatWeDo.js'
+import Testimonials from '../components/Testimonials/Testimonials.js'
+import ContactUs from '../components/ContactUs/ContactUs.js'
 
 function MainPage(){
     return (
         <div>
             <Navbar />
-            <SlideShow2 />
-            Main Page
+            <SlideShow />
+            <WhatWeDo />
+            <Testimonials />
+            <ContactUs />
         </div>
     )
 }
