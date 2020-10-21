@@ -1,14 +1,36 @@
 const express = require('express'),
       router = express.Router({mergeParams: true}),
-      Slide = require('../models/slide');
+      Slide = require('../models/slide'),
+      axios = require('axios')
+
+
+async function getBase64(url) {
+  const payload = {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Access-Control-Allow-Origin': '*'
+  }
+  const arrayBuffer = await axios({
+    method: 'get',
+    url: url,
+    headers: payload,
+    responseType: 'arraybuffer'
+  });
+  //const arrayBuffer = await axios.get(url, { responseType: 'arraybuffer' });
+  const base64Response = Buffer.from(arrayBuffer.data, 'binary').toString('base64');
+  return base64Response;
+}      
 
 //INDEX - GET all slides
 router.get('/slides', async (req,res) => {
     console.log("REQUEST ::  get all slides");
     try{
       const slides = await Slide.find({})
-      console.log(JSON.stringify(slides));
-      return res.send(slides)
+      const slideOne = slides[0];
+      const converted = await getBase64(slideOne.imageUrl);
+      //console.log("converted: "+converted);
+      //console.log(JSON.stringify(slides));
+      return res.send(converted)
     } catch(error) {
       return res.status(500).json({
         error: true,

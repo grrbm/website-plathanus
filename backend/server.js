@@ -47,7 +47,7 @@ async function connectDB(){
     //Populate DB here !
     //----------------------------------------------------------------
     try{
-        const slide = new Slide({imageUrl:'https://drive.google.com/file/d/1DTG2OmU9Ovw9RnkeNoBbqq0v8KMCTfB9/view?usp=sharing'});
+        const slide = new Slide({imageUrl:'https://www.top-password.com/blog/wp-content/uploads/2016/11/open-folder-options.png'});
         await slide.save();
         console.log(`Slide created successfully !`);
     } catch (e) {
