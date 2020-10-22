@@ -26,7 +26,7 @@ function AlternativeNavbar(){
     },[])
     return(
         <header class="header">
-            <nav class="navbar navbar-expand-sm navbar-brand-center fixed-top">
+            <nav class="navbar navbar-expand-custom navbar-brand-center fixed-top py-3">
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,16 +35,19 @@ function AlternativeNavbar(){
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-nowrap" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link text-nowrap" href="#">What we do?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link text-nowrap disabled" href="#">Testimonial</a>
+                    </li>
+                    <li style={{borderTop:'7px solid #54D154', marginTop: '0px'}} class="nav-item">
+                        <a class="nav-link text-nowrap disabled" href="#">Contact Us</a>
                     </li>
                     </ul>
-                    <a class="navbar-brand mr-auto" href="#">
+                    <a class="navbar-brand mx-auto" href="#">
                         <img src={logo} alt=""/>
                     </a>
                     <form class="form-inline my-2 my-lg-0">

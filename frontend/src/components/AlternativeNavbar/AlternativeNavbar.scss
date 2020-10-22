@@ -7,6 +7,30 @@
 */
 .navbar {
     transition: all 0.4s;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+@media (min-width: 0px){
+    .navbar-expand-custom {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        height: 47px;
+    }
+    .navbar-expand-custom .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-expand-custom .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+    .navbar-expand-custom .navbar-collapse {
+        display: flex!important;
+    }
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
 }
 
 .navbar .nav-link {
