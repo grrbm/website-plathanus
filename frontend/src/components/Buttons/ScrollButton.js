@@ -1,5 +1,5 @@
 import React from "react"
-import './Button.scss'
+import './ScrollButton.scss'
 import shape1svg from './Shape 1.svg'
 
 function ScrollButton(){

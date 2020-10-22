@@ -1,0 +1,23 @@
+.WhatWeDo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.second-part {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+}
+
+.task {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
