@@ -4,6 +4,12 @@ import $ from "jquery";
 import logo from "../../img/logo-plathanus.png"
 
 function AlternativeNavbar(){
+    function scrollToFunction(anchor){
+        anchor = anchor.substring(1);
+        var elementToScrollTo = document.getElementById(anchor);
+        console.log(anchor);
+        elementToScrollTo.scrollIntoView(true);
+    }
     function handleScroll(){
         if ( $(window).scrollTop() > 10 ) {
             $('.navbar').addClass('active');
@@ -15,8 +21,8 @@ function AlternativeNavbar(){
     function handleClick(e){
         console.log("handling click");
         e.preventDefault();
-        const name = ""+e.target;
-        $(`a[href|='${'#'+name.split('#')[1]}']`).closest('li').addClass('active').siblings().removeClass('active')
+        $(`a[href|='${e.target.getAttribute('href')}']`).closest('li').addClass('active').siblings().removeClass('active')
+        scrollToFunction(e.target.getAttribute('href'));        
     }
     useEffect(()=>{
         window.addEventListener('scroll', handleScroll);
@@ -41,7 +47,7 @@ function AlternativeNavbar(){
                         <a class="nav-link text-nowrap" onClick={handleClick} href="#whatwedo">What we do?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-nowrap disabled" onClick={handleClick} href="#testimonial">Testimonial</a>
+                        <a class="nav-link text-nowrap disabled" onClick={handleClick} href="#testimonials">Testimonial</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-nowrap disabled" onClick={handleClick} href="#contactus">Contact Us</a>

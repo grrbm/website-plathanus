@@ -11,10 +11,10 @@ function MainPage(){
     return (
         <div>
             <Navbar />
-            <SlideShow />
-            <WhatWeDo />
-            <Testimonials />
-            <ContactUs />
+            <SlideShow id="home" />
+            <WhatWeDo id="whatwedo" />
+            <Testimonials id="testimonials" />
+            <ContactUs id="contactus" />
         </div>
     )
 }

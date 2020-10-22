@@ -1,8 +1,8 @@
 import React from "react"
 import "./ContactUs.scss"
 
-function ContactUs(){
-    return (<div id="contactus" className="ContactUs">
+function ContactUs(props){
+    return (<div id={props.id} className="ContactUs">
                 ContactUs
             </div>)
 }

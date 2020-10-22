@@ -10,7 +10,7 @@ const fadeImages = [
   "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
 ];
 
-export default function App() {
+export default function App(props) {
   const [data,setData] = useState(<Fade>        
     <div className="each-fade">
         <img src={fadeImages[0]} />
@@ -43,7 +43,7 @@ export default function App() {
     fetchSlides();
   },[])
   return (
-    <div id="home" className="slide-container">
+    <div id={props.id} className="slide-container">
       {data}
     </div>
   );

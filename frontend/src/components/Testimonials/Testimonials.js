@@ -1,8 +1,8 @@
 import React from "react"
 import "./Testimonials.css"
 
-function Testimonials(){
-    return (<div id="testimonials" className="Testimonials">
+function Testimonials(props){
+    return (<div id={props.id} className="Testimonials">
                 Testimonials
             </div>)
 }
