@@ -1,0 +1,21 @@
+#search-button {
+    width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    background: white;
+    border: none;
+    padding: 0px 2px 0px 2px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 25px;
+    z-index: 100;
+}
+      
+#search-button img{
+    width: 12px;
+    height: 12px;
+}

@@ -3,7 +3,7 @@ import NavbarCss from './Navbar.scss'
 import $ from "jquery";
 import logo from "../../img/logo-plathanus.png"
 
-function AlternativeNavbar(){
+function Navbar(){
     function scrollToFunction(anchor){
         anchor = anchor.substring(1);
         var elementToScrollTo = document.getElementById(anchor);
@@ -66,4 +66,4 @@ function AlternativeNavbar(){
     )
 }
 
-export default AlternativeNavbar
+export default Navbar
