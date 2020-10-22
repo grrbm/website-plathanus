@@ -38,6 +38,12 @@ function AlternativeNavbar(){
                             </ul>
                         </div>
                     </div>
+                {/*<!-- Navbar Right -->*/}
+                <ul class="navbar-nav ml-auto">
+                <form class="form-inline" action="/action_page.php">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" />
+                </form>
+                </ul>
                 </nav>
             </header>
     )
