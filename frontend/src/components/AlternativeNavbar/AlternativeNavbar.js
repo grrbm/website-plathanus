@@ -35,16 +35,16 @@ function AlternativeNavbar(){
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-nowrap" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-nowrap" onClick={handleClick} href="#home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-nowrap" href="#">What we do?</a>
+                        <a class="nav-link text-nowrap" onClick={handleClick} href="#whatwedo">What we do?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-nowrap disabled" href="#">Testimonial</a>
+                        <a class="nav-link text-nowrap disabled" onClick={handleClick} href="#testimonial">Testimonial</a>
                     </li>
-                    <li style={{borderTop:'7px solid #54D154', marginTop: '0px'}} class="nav-item">
-                        <a class="nav-link text-nowrap disabled" href="#">Contact Us</a>
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap disabled" onClick={handleClick} href="#contactus">Contact Us</a>
                     </li>
                     </ul>
                     <a class="navbar-brand mx-auto" href="#">
