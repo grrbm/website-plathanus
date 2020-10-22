@@ -1,113 +1,101 @@
-/* Add the decaration on top */
-@font-face { 
-    font-family: 'Agustina';
-    src: url('../../fonts/Agustina.woff') format('woff');
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+.navbar {
+    transition: all 0.4s;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
-@font-face { 
-    font-family: 'Montserrat';
-    src: local('Montserrat'), url('../../fonts/Montserrat-Regular.ttf') format('woff');
+.navbar-expand-custom {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    height: 47px;
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    } 
+    .navbar-collapse {
+        display: flex!important;
+    }
+    .navbar-toggler {
+        display: none;
+    }
+}
+    
+    
+   
+    
+
+
+.navbar .nav-link {
+    color: #fff;
 }
 
-#app-container
-{
-    width: 1280px;
-}
-
-ul#menu
-{
-    list-style-type: none;
-    font-family: Montserrat;
-    background-color: white;
-    padding: 15px 0 15px 0;
-    margin: 0;
-    width:100%;
-    text-align: center
-}
-ul#menu li 
-{
-    display:inline-block;
-    padding: 15px 0 15px 0;
-    margin: 0 10px 0 0;
-}
-
-li a 
-{
-    width: 60px;
-    padding: 10px 13px 10px 13px;
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
     text-decoration: none;
-    font-weight: normal;
 }
-a {color:black;}         /* Unvisited link  */
-a:visited {color:black;} /* Visited link    */
-a:hover 
-{
-    color:black;
-    background-color: #ECEEEF;
-}   /* Mouse over link */
-a:active {color:black;}  /* Selected link   */
 
-
-.title
-{
-    color: black;
-    font-size: 42px;
-}
-.subtitle
-{
-    font: 19px / 23px Montserrat, "Montserrat", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color:grey;
+.navbar .navbar-brand {
+    color: #fff;
 }
 
 
-  
+/* Change navbar styling on scroll */
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
 
+.navbar.active .nav-link {
+    color: #555;
+}
 
-div .list
-{
-font-family: Montserrat;
-font-weight: normal;
-font-style: normal;
-font-size: 32px;
-text-align: center;
-height: 100%;
-background-color: white;
-color:grey;
-justify-content: center;
-align-items: center;
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
 }
 
 
-
-#signature
-{
-font-family: Agustina;
-font-weight: bold;
-text-decoration: none;
-font-size: 18px;
-text-align: center;
-color: purple;
-width: 150px;
-margin: auto;
+li {
+    margin-top: 7px;
 }
 
-#signatureParent
-{
-text-align: center;
-text-decoration: none;
-color: grey;
-width: 150px;
-margin: auto;  
-}
-#signatureParent:hover {background-color: white;}
+li.active {
+    margin-top: 0px;
+    border-top: 7px solid #54D154;
 
-.language-color {
-width: 7px;
-height: 7px;
-background-color: blue;
-margin-right: 0.25rem;
-border-radius: 100%;
-display: inline-block;
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+.text-small {
+    font-size: 0.9rem !important;
+}
+
+
+body {
+    min-height: 110vh;
+    background-color: #4ca1af;
+    background-image: linear-gradient(135deg, #4ca1af 0%, #c4e0e5 100%);
 }

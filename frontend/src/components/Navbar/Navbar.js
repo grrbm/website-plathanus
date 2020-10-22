@@ -1,33 +1,63 @@
-import React from "react"
-import NavbarCss from "./Navbar.scss"
+import React, { useEffect } from "react"
+import NavbarCss from './Navbar.scss'
+import $ from "jquery";
+import logo from "../../img/logo-plathanus.png"
 
-function Navbar() {
-    const scrollToFunction = (event) => {
-        var elementToScrollTo = document.querySelector(event.target.getAttribute('href'))
-        console.log(event.target.getAttribute('href'));
-        elementToScrollTo.scrollIntoView(true);
+function AlternativeNavbar(){
+    function handleScroll(){
+        if ( $(window).scrollTop() > 10 ) {
+            $('.navbar').addClass('active');
+        } else {
+            $('.navbar').removeClass('active');
+        }
+        console.log("handling scroll");
     }
-    //flex: 0 1 auto;
-    /* The above is shorthand for:
-    flex-grow: 0,
-    flex-shrink: 1,
-    flex-basis: auto
-    */
-    return (
-        <div style={{display:'flex', flexDirection:'row'}}>
-            <a href="/" id="signatureParent" style={{flex: '0 1 200px'}}>
-                <p style={{display: 'inline'}}>&#60; </p>
-                <p style={{display: 'inline'}} id="signature">Guilherme Reis</p>
-                <p style={{display: 'inline'}}> /&#62;</p>
-            </a>
-            <ul style={{flex: '1 0 400px'}} id="menu">
-                <li><a onClick={scrollToFunction} href="#home">Home</a></li>
-                <li><a onClick={scrollToFunction} href="#whatwedo">What we do ?</a></li>
-                <li><a onClick={scrollToFunction} href="#testimonials">Testimonials</a></li>
-                <li><a onClick={scrollToFunction} href="#contactus">Contact Us</a></li>
-            </ul>
-        </div>
+    function handleClick(e){
+        console.log("handling click");
+        e.preventDefault();
+        const name = ""+e.target;
+        $(`a[href|='${'#'+name.split('#')[1]}']`).closest('li').addClass('active').siblings().removeClass('active')
+    }
+    useEffect(()=>{
+        window.addEventListener('scroll', handleScroll);
+        return function cleanup() {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    },[])
+    return(
+        <header class="header">
+            <nav class="navbar navbar-expand-custom navbar-brand-center fixed-top py-3">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-nowrap" onClick={handleClick} href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap" onClick={handleClick} href="#whatwedo">What we do?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap disabled" onClick={handleClick} href="#testimonial">Testimonial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap disabled" onClick={handleClick} href="#contactus">Contact Us</a>
+                    </li>
+                    </ul>
+                    <a class="navbar-brand mx-auto" href="#">
+                        <img src={logo} alt=""/>
+                    </a>
+                    <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                    </form>
+                </div>
+                
+            </nav>
+        </header>
     )
 }
 
-export default Navbar
+export default AlternativeNavbar
