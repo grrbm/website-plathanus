@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import AlternativeNavbarCss from './AlternativeNavbar.scss'
 import $ from "jquery";
+import logo from "../../img/logo-plathanus.png"
 
 function AlternativeNavbar(){
     function handleScroll(){
@@ -24,28 +25,35 @@ function AlternativeNavbar(){
         }
     },[])
     return(
-            <header class="header">
-                <nav class="navbar active navbar-expand-lg fixed-top py-3">
-                    <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">Transparent Nav</a>
-                        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
-                        
-                        <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"><a href="#home" onClick={handleClick} class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
-                                <li class="nav-item"><a href="#whatwedo" onClick={handleClick} class="nav-link text-uppercase font-weight-bold">What we do?</a></li>
-                                <li class="nav-item"><a href="#testimonials" onClick={handleClick} class="nav-link text-uppercase font-weight-bold">Testimonials</a></li>
-                                <li class="nav-item"><a href="#contactus" onClick={handleClick} class="nav-link text-uppercase font-weight-bold">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                {/*<!-- Navbar Right -->*/}
-                <ul class="navbar-nav ml-auto">
-                <form class="form-inline" action="/action_page.php">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" />
-                </form>
-                </ul>
-                </nav>
-            </header>
+        <header class="header">
+            <nav class="navbar navbar-expand-sm navbar-brand-center fixed-top">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                    </ul>
+                    <a class="navbar-brand mr-auto" href="#">
+                        <img src={logo} alt=""/>
+                    </a>
+                    <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                    </form>
+                </div>
+                
+            </nav>
+        </header>
     )
 }
 
