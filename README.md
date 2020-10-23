@@ -15,7 +15,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][plathanus-site]](https://example.com)
 
 This project is a straightforward web application divided in two parts, front-end and back-end. It was created as requested by Plathanus (https://www.plathanus.com.br/) as a test for a Senior Web Developer position.
 
@@ -192,5 +192,6 @@ Project Link: [https://github.com/grrbm/chat-mern](https://github.com/grrbm/webs
 [slides-find]: images/slides-find.PNG
 [update-one]: images/update-one.PNG
 [docker-exec]: images/docker-exec.PNG
+[plathanus-site]: images/plathanus-site.png
 
 
