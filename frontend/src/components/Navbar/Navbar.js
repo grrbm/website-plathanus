@@ -57,9 +57,10 @@ function Navbar(){
                     <a class="navbar-brand mx-auto" href="#">
                         <img src={logo} alt=""/>
                     </a>
-                    <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                    </form>
+                    <div class="search-container">
+                        <input type="text" class="search-box" placeholder="Search..." />
+                        <i class="fa fa-search search-icon"></i>
+                    </div>
                 </div>
                 
             </nav>
