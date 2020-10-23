@@ -7,7 +7,6 @@ WORKDIR /srv/app/admin-client
 
 COPY package.json /srv/app/admin-client
 COPY package-lock.json /srv-app/admin-client
-COPY .env /srv-app/admin-client
 
 
 RUN npm install --silent

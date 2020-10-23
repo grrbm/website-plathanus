@@ -26,13 +26,21 @@ The project was built with the MERN stack for web development (MongoDB, Express,
 * [Node.js](https://nodejs.org/)
 
 
+### Installing Docker Desktop (Windows)
+The application is set up to run in a Docker environment.
 
-### Installation (Windows)
+1. Download Docker Desktop
+ ```
+https://docs.docker.com/docker-for-windows/install/
+ ```
+2. From the Docker Desktop menu, you can toggle which daemon (Linux or Windows) the Docker CLI talks to. Select Switch to Linux containers to use Linux containers (the default).
+
+### Application Installation (Windows)
 The application can be installed and tested in a few simple steps.
 
 1. Clone the repo, and open the cloned repo's folder.
   ```sh
-git clone https://github.com/grrbm/chat-mern.git
+git clone https://github.com/grrbm/website-plathanus
   ```
 2. Open 'backend' folder and install
   ```sh
@@ -42,31 +50,26 @@ git clone https://github.com/grrbm/chat-mern.git
   ```sh
   npm install
   ```
-4. Open a new terminal and run MongoDB
+4. On the root folder of the project, run
   ```JS
-  mongod
+  docker-compose up --build
   ```
-5. Open a second new terminal, and run the server from the project root
-  ```JS
-  npm run server
   ```
-6. Open a third new terminal, and run the client from the project root
-  ```JS
-  npm start
+5. When we see the following message on the console:
+[![Product Name Screen Shot][thing]](https://example.com)
+You can go to your browser, type: 
+  ```sh
+localhost
   ```
-
+and press enter. The app use the default port (80), so just "localhost" is enough. 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-As a Regular User, your basic use case is to join the chat room to send/receive messages. When a new username and password combination is used on the Join Screen (one that the server hasn't seen before),
-a new User is created in the database via a call to the backend.
-
-You can also login as an Admin, for testing purposes. The admin credentials are populated in the database the first time you run the server. The admin credentials are the following:
+Open Powershell, and run docker ps to see what Docker images are mounted
 
   ```sh
-username: admin
-password: adminpass
+docker ps
   ```
 [![Product Name Screen Shot][join-screenshot]](https://example.com)
 
@@ -124,3 +127,4 @@ Project Link: [https://github.com/grrbm/chat-mern](https://github.com/grrbm/chat
 [product-screenshot]: images/screenshot.png
 [feature-screenshot]: images/filterby.png
 [join-screenshot]: images/joinscreen.PNG
+[thing]: images/client_1.PNG
