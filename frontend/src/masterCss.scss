@@ -25,15 +25,15 @@ body
 
 @font-face {
     font-family: 'Proxima Nova Regular';
-    src: url('ProximaNova-Regular') format('otf');
+    src: url('./fonts/ProximaNova-Regular.otf') format('otf');
 }
 
 @font-face {
     font-family: 'Proxima Nova Bold';
-    src: url('ProximaNova-Bold') format('otf');
+    src: url('./fonts/ProximaNova-Bold.otf') format('otf');
 }
 
 @font-face {
     font-family: 'Proxima Nova Light';
-    src: url('ProximaNova-Light') format('otf');
+    src: url('./fonts/ProximaNova-Light.otf') format('otf');
 }

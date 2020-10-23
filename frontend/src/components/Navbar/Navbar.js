@@ -9,6 +9,7 @@ function Navbar(){
         var elementToScrollTo = document.getElementById(anchor);
         console.log(anchor);
         elementToScrollTo.scrollIntoView(true);
+        //document.getElementById("root").scrollTop -= 10;
     }
     function handleScroll(){
         if ( $(window).scrollTop() > 10 ) {
