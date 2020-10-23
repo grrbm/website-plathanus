@@ -1,3 +1,35 @@
+.first-part {
+    position: relative;
+}
+.title {
+    margin-top: 52px;
+    font-size: 22px;
+    letter-spacing: 0.1rem;
+    color: #828181;
+    text-align: center;
+}
+
+.title:after {
+    content: '';
+    height: 1px; //You can change this if you want smaller/bigger borders
+    width: 8%;
+    
+    position: absolute;
+    top: 5.3rem;
+    left: 0; // If you want to set a smaller height and center it, change this value
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+  
+    background-color: #828181; // The color of your border
+}
+
+.subtitle {
+    margin-top: 16px;
+    color: #828181;
+}
+
 .WhatWeDo {
     display: flex;
     flex-direction: column;
