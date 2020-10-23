@@ -59,11 +59,11 @@ git clone https://github.com/grrbm/website-plathanus
 
 
 
-[![Product Name Screen Shot][thing]](https://example.com)
+[![Product Name Screen Shot][client-one]](https://example.com)
 
 
 
-\n
+
 You can go to your browser, type: 
   ```sh
 localhost
@@ -78,15 +78,67 @@ Open Powershell, and run docker ps to see what Docker images are mounted
   ```sh
 docker ps
   ```
-[![Product Name Screen Shot][join-screenshot]](https://example.com)
 
-As an admin, you have access to the Admin Area panel.
-
-You can use this panel to filter the chat's messages by Date and Time, as well as by username. It's also possible to reverse the order the chat's messages appear, Newest or Oldest messages first.
-
-[![Product Name Screen Shot][feature-screenshot]](https://example.com)
+You should see the following: 
+[![Product Name Screen Shot][docker-ps]](https://example.com)
 
 
+After that, copy the mounted image name you got with the previous command (for example, website-plathanus_mongo_1) and run the following to open the bash for the volume where mongodb is mounted:
+
+```sh
+docker exec -it website-plathanus_mongo_1 bash
+```
+
+
+[![Product Name Screen Shot][docker-exec]](https://example.com)
+
+
+
+
+Once you're in this terminal, run:
+
+```sh
+mongo
+```
+
+to open mongoDB bash. You will see: 
+
+[![Product Name Screen Shot][mongo-bash]](https://example.com)
+
+
+
+Once you're in mongo bash, you can run commands to manipulate the database.
+
+Execute "use plathanus-database" command to use the database for this application.
+
+```sh
+use plathanus
+```
+
+Then you can show everything the "slides" collection contains with the command: 
+
+```sh
+db.slides.find().pretty()
+```
+
+[![Product Name Screen Shot][slides-find]](https://example.com)
+
+
+
+By default, the slideshow has three slides with attributes "imageName" and "imageUrl". You can customize the slideshow by changing the imageUrl's for one of the slides.
+
+```sh
+db.slides.updateOne({"imageName":"slideOne"},{$set: {"imageUrl":"https://i.imgur.com/nlVAFXN.jpg"}});
+```
+
+
+
+[![Product Name Screen Shot][update-one]](https://example.com)
+
+
+
+
+Then you can just refresh the browser tab running the application to see the results.
 <!-- LICENSE -->
 ## License
 
@@ -134,4 +186,11 @@ Project Link: [https://github.com/grrbm/chat-mern](https://github.com/grrbm/chat
 [product-screenshot]: images/screenshot.png
 [feature-screenshot]: images/filterby.png
 [join-screenshot]: images/joinscreen.PNG
-[thing]: images/client_1.PNG
+[client-one]: images/client_1.PNG
+[docker-ps]: images/docker-ps.PNG
+[mongo-bash]: images/mongo-bash.PNG
+[slides-find]: images/slides-find.PNG
+[update-one]: images/update-one.PNG
+[docker-exec]: images/docker-exec.PNG
+
+
