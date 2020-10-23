@@ -55,7 +55,9 @@ git clone https://github.com/grrbm/website-plathanus
   docker-compose up --build
   ```
 5. When we see the following message on the console:
+```sh
 [![Product Name Screen Shot][thing]](https://example.com)
+```
 You can go to your browser, type: 
   ```sh
 localhost
