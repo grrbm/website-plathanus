@@ -3,7 +3,8 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
-* [Installation](#installation)
+* [Installing Docker Desktop (Windows)](#installing-docker-desktop-(windows))
+* [Application Installation (Windows)](#application-installation-(windows))
 * [Usage](#usage)
 * [License](#license)
 * [Contact](#contact)
@@ -151,19 +152,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Guilherme Reis - [LinkedIn](https://www.linkedin.com/in/guilherme-reis-1691b597/) - [Portfolio](https://guilhermereisrbm.netlify.app/) -  grrbm2@gmail.com
 
-Project Link: [https://github.com/grrbm/chat-mern](https://github.com/grrbm/chat-mern)
+Project Link: [https://github.com/grrbm/chat-mern](https://github.com/grrbm/website-plathanus)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [Socket.io](https://socket.io/)
-* [JsonWebToken](https://www.npmjs.com/package/jsonwebtoken)
 * [Mongoose](https://mongoosejs.com/)
 * [Axios](https://github.com/axios/axios)
-* [react-datetime](https://github.com/YouCanBookMe/react-datetime)
-* [sweetalert2](https://sweetalert2.github.io/)
-* [moment](https://momentjs.com/)
+* [react-slideshow-image](https://github.com/femioladeji/react-slideshow)
+* [Bootstrap4](https://getbootstrap.com/)
+* [jquery](https://jquery.com/)
+* [node-sass](https://github.com/sass/node-sass)
 
 
 
