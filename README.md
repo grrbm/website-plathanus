@@ -112,7 +112,7 @@ Once you're in mongo bash, you can run commands to manipulate the database.
 Execute "use plathanus-database" command to use the database for this application.
 
 ```sh
-use plathanus
+use plathanus-database
 ```
 
 Then you can show everything the "slides" collection contains with the command: 
