@@ -17,7 +17,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-This project is a straightforward chat application. It uses websockets for communication between server and clients, and updates the chat screen in real time.
+This project is a straightforward web application divided in two parts, front-end and back-end. It was created as requested by Plathanus (https://www.plathanus.com.br/) as a test for a Senior Web Developer position.
 
 ### Built With
 The project was built with the MERN stack for web development (MongoDB, Express, React.js, Node.js)
