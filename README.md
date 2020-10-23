@@ -54,7 +54,6 @@ git clone https://github.com/grrbm/website-plathanus
   ```JS
   docker-compose up --build
   ```
-  ```
 5. When we see the following message on the console:
 [![Product Name Screen Shot][thing]](https://example.com)
 You can go to your browser, type: 
