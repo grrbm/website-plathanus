@@ -152,7 +152,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Guilherme Reis - [LinkedIn](https://www.linkedin.com/in/guilherme-reis-1691b597/) - [Portfolio](https://guilhermereisrbm.netlify.app/) -  grrbm2@gmail.com
 
-Project Link: [https://github.com/grrbm/chat-mern](https://github.com/grrbm/website-plathanus)
+Project Link: [https://github.com/grrbm/website-plathanus](https://github.com/grrbm/website-plathanus)
 
 
 
