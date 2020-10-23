@@ -3,7 +3,7 @@ import './RegularButton.scss'
 
 function RegularButton(){
     return(
-        <button id="regular-button">
+        <button id="regular-button" className="proxima-bold">
             Learn more
         </button>
     )

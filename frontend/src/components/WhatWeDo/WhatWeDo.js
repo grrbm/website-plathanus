@@ -23,20 +23,20 @@ function WhatWeDo(props){
                 <div className="second-part">
                     <div className="task"> 
                         <img src={shape1svg} alt="Kiwi standing on oval" />
-                        <h3>Lorem Ipsum</h3>
-                        {string1}
+                        <h3 className="proxima-bold task-title">Lorem Ipsum</h3>
+                        <p className="proxima-reg task-description">{string1}</p>
                         <RegularButton/>
                     </div>
                     <div className="task">
                         <img src={shape2svg} alt="Kiwi standing on oval" />
-                        <h3>Lorem Ipsum</h3>
-                        {string2}
+                        <h3 className="proxima-bold task-title">Lorem Ipsum</h3>
+                        <p className="proxima-reg task-description">{string2}</p>
                         <RegularButton/>
                     </div>
                     <div className="task">
                         <img src={shape3svg} alt="Kiwi standing on oval" />
-                        <h3>Lorem Ipsum</h3>
-                        {string3}
+                        <h3 className="proxima-bold task-title">Lorem Ipsum</h3>
+                        <p className="proxima-reg task-description">{string3}</p>
                         <RegularButton/>
                     </div>
                 </div>
