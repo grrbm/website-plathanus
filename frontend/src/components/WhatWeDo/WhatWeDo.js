@@ -16,7 +16,8 @@ function WhatWeDo(props){
     return (<div id={props.id} className="WhatWeDo">
                 
                 <div className="first-part">
-                    <h3>What We Do</h3>
+                    <h4 className="proxima-light title">WHAT WE DO</h4>
+                    <h6 className="proxima-light subtitle">Lorem ipsum sit dolor iamet. Proin gravida nibh vel veli auctor aliquet.</h6>
                     
                 </div>
                 <div className="second-part">

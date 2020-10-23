@@ -22,30 +22,31 @@ body
 }
 
 .proxima-reg {
-    font-family: 'Proxima Nova Regular';
-}
-
-.proxima-bold {
-    font-family: 'Proxima Nova Bold';
+    font-family: Proxima Nova Regular;
 }
 
 .proxima-light {
-    font-family: 'Proxima Nova Light';
+    font-family: Proxima Nova Light;
 }
 
+.proxima-bold {
+    font-family: Proxima Nova Bold;
+}
 /* Fonts */
+
+/* Add the decaration on top */
 
 @font-face {
     font-family: 'Proxima Nova Regular';
-    src: url('./fonts/ProximaNova-Regular.otf') format('otf');
+    src: url('./fonts/ProximaNova-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Proxima Nova Bold';
-    src: url('./fonts/ProximaNova-Bold.otf') format('otf');
+    src: url('./fonts/ProximaNova-Bold.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Proxima Nova Light';
-    src: url('./fonts/ProximaNova-Light.otf') format('otf');
+    src: url('./fonts/ProximaNova-Light.woff') format('woff');
 }
