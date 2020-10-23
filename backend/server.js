@@ -47,7 +47,7 @@ async function connectDB(){
     //Populate DB here !
     //----------------------------------------------------------------
     try{
-        const slide = new Slide({imageUrl:'https://i.imgur.com/nlVAFXN.jpg'});
+        const slide = new Slide({imageName: 'slideOne',imageUrl:'https://i.imgur.com/nlVAFXN.jpg'});
         await slide.save();
         console.log(`Slide created successfully !`);
     } catch (e) {
@@ -57,13 +57,24 @@ async function connectDB(){
         }
     }
     try {
-        const secondSlide = new Slide({imageUrl:'https://res.cloudinary.com/practicaldev/image/fetch/s--tOb6t0kL--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/l3ox5viwvknip9apk49t.png'});
+        const secondSlide = new Slide({imageName: 'slideTwo', imageUrl:'https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'});
         await secondSlide.save();
         console.log(`Second Slide created successfully !`);
     } catch (e) {
         if (e.toString().substring(0,18) === 'MongoError: E11000')
         {
             console.log("Second Slide has already been created.");
+        }
+    }
+
+    try {
+        const thirdSlide = new Slide({imageName: 'slideThree', imageUrl:'https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80'});
+        await thirdSlide.save();
+        console.log(`Third Slide created successfully !`);
+    } catch (e) {
+        if (e.toString().substring(0,18) === 'MongoError: E11000')
+        {
+            console.log("Third Slide has already been created.");
         }
     }
     

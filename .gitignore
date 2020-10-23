@@ -6,7 +6,5 @@ node_modules/**/*
 # CRA build
 frontend/build/**/*
 .vscode
-#README
-README.md
 #whatToChange
 whatToChange.txt

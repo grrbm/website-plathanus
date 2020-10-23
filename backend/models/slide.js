@@ -1,11 +1,15 @@
 const mongoose = require('mongoose')
 
 const slideSchema = new mongoose.Schema({
-    imageUrl: {
+    imageName: {
         type: String,
         default: undefined,
         index: true,
         unique: true
+    },
+    imageUrl: {
+        type: String,
+        default: undefined,
     }
 });
 
