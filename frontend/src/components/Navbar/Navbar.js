@@ -6,10 +6,13 @@ import logo from "../../img/logo-plathanus.png"
 function Navbar(){
     function scrollToFunction(anchor){
         anchor = anchor.substring(1);
-        var elementToScrollTo = document.getElementById(anchor);
-        console.log(anchor);
-        elementToScrollTo.scrollIntoView(true);
-        //document.getElementById("root").scrollTop -= 10;
+        if (anchor === 'home' || anchor === 'whatwedo'){
+            var elementToScrollTo = document.getElementById(anchor);
+            console.log(anchor);
+            elementToScrollTo.scrollIntoView(true);
+            //document.getElementById("root").scrollTop -= 10;
+        }
+        
     }
     function handleScroll(){
         if ( $(window).scrollTop() > 10 ) {
