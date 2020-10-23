@@ -20,3 +20,20 @@ body
     margin: 0;
     width:100%;
 }
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url('ProximaNova-Regular') format('otf');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('ProximaNova-Bold') format('otf');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Light';
+    src: url('ProximaNova-Light') format('otf');
+}
