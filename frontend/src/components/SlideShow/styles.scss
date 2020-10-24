@@ -1,3 +1,9 @@
 #home {
     position: relative;
 }
+
+.react-slideshow-container {
+    button.nav.default-nav {
+        display: none;
+    }
+}
