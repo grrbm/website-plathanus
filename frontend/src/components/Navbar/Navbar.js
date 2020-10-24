@@ -17,10 +17,10 @@ function Navbar(){
     function handleScroll(){
         if ( $(window).scrollTop() > 10 ) {
             $('.navbar').addClass('active');
-            $('#scroll-button').addClass('hide');
+            $('#scroll-button').fadeOut(600,"linear");
         } else {
             $('.navbar').removeClass('active');
-            $('#scroll-button').removeClass('hide');
+            $('#scroll-button').fadeIn();
         }
         console.log("handling scroll");
     }
