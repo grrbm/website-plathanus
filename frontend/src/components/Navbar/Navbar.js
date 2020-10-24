@@ -17,8 +17,10 @@ function Navbar(){
     function handleScroll(){
         if ( $(window).scrollTop() > 10 ) {
             $('.navbar').addClass('active');
+            $('#scroll-button').addClass('hide');
         } else {
             $('.navbar').removeClass('active');
+            $('#scroll-button').removeClass('hide');
         }
         console.log("handling scroll");
     }
