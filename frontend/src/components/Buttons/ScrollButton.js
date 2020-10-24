@@ -4,7 +4,7 @@ import shape1svg from './Shape 1.svg'
 
 function ScrollButton(){
     return(
-        <button id="search-button">
+        <button id="search-button" className="proxima-reg">
             scroll down
             <img src={shape1svg} alt="Kiwi standing on oval" />
         </button>

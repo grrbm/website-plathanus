@@ -45,23 +45,23 @@ function Navbar(){
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-nowrap" onClick={handleClick} href="#home">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-nowrap proxima-reg" onClick={handleClick} href="#home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-nowrap" onClick={handleClick} href="#whatwedo">What we do?</a>
+                        <a class="nav-link text-nowrap proxima-reg" onClick={handleClick} href="#whatwedo">What we do?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-nowrap disabled" onClick={handleClick} href="#testimonials">Testimonial</a>
+                        <a class="nav-link text-nowrap proxima-reg" onClick={handleClick} href="#testimonials">Testimonial</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-nowrap disabled" onClick={handleClick} href="#contactus">Contact Us</a>
+                        <a class="nav-link text-nowrap proxima-reg" onClick={handleClick} href="#contactus">Contact Us</a>
                     </li>
                     </ul>
                     <a class="navbar-brand mx-auto" href="#">
                         <img src={logo} alt=""/>
                     </a>
                     <div class="search-container">
-                        <input type="text" class="search-box" placeholder="Search..." />
+                        <input type="text" class="search-box proxima-reg" placeholder="Search..." />
                         <i class="fa fa-search search-icon"></i>
                     </div>
                 </div>
