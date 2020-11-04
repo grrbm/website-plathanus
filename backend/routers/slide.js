@@ -27,13 +27,10 @@ router.get('/slides', async (req,res) => {
     try{
       const slides = await Slide.find({})
       const slideOne = slides[0];
-      //const converted = await getBase64(slideOne.imageUrl);
       const slidesConverted = await Promise.all(slides.map(item => getBase64(item.imageUrl)));
 
-      //console.log("converted: "+converted);
-      //console.log(JSON.stringify(slides));
       return res.send(slidesConverted);
-    } catch(error) {
+    } catch(e) {
       return res.status(500).json({
         error: true,
         message: e.toString()
